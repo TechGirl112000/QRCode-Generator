@@ -1,0 +1,40 @@
+body {
+    background-color: #f8f9fa; /* Light background color */
+}
+
+h1 {
+    color: #343a40; /* Darker text color */
+}
+
+.btn {
+    font-size: 1.2em; /* Increase button font size */
+}
+
+.img-fluid {
+    max-width: 300px; /* Limit the size of the QR code image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.btn-light {
+    background-color: transparent !important; /* Remove hover background color */
+    border: none !important; /* Remove hover border */
+    box-shadow: none !important; /* Remove focus outline */
+}
+
+.btn-light:hover {
+   background-color: transparent !important; /* Remove hover background color */
+    border: none !important; /* Remove hover border */
+    box-shadow: none !important; /* Remove focus outline */
+}
+
+.btn-light:active {
+    background-color: transparent !important; /* Remove hover background color */
+    border: none !important; /* Remove hover border */
+    box-shadow: none !important; /* Remove focus outline */ 
+}
+
+.btn-light:focus {
+    background-color: transparent !important; /* Remove hover background color */
+    border: none !important; /* Remove hover border */
+    box-shadow: none !important; /* Remove focus outline */
+}

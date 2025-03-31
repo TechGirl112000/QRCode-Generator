@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="description" content="Free for everyone (commercial and print usage allowed). QR codes on business cards, T-Shirts, mugs and more! Logo QR code possible.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QR Code Generator – create QR codes for free</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M3TTP04J1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-M3TTP04J1V');
+</script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">QR Code Generator</h1>
+        <form action="/generate" method="POST" class="mt-4">
+            <div class="form-group">
+                <input type="text" name="text" class="form-control" placeholder="Enter text or URL" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Generate QR Code</button>
+        </form>
+        <% if (qrCode) { %>
+           <div id="qrCodeSection" style="display: none;">
+        <h2 class="text-center mt-4">Your QR Code:</h2>
+        <div class="text-center">
+            <img src="<%= qrCode %>" alt="QR Code" class="img-fluid mt-3" id="qrCodeImage">
+        </div>
+        <div class="text-center">
+            <a href="<%= qrCode %>" download="qrcode.png" class="btn btn-success mt-3" id="downloadBtn">Download QR Code</a>
+        </div>
+    </div>
+        <% } %>
+
+        <h2 class="text-center mt-4">Information about Our QR Code Generator</h2>
+        <p>You can create free QR codes on our website. A QR code is a 2D barcode that stores information in black and white dots, known as data pixels or QR code modules. In addition to the standard black and white QR code, you can also generate a colored version. Ensure the contrast is adequate to avoid issues, and avoid negative color combinations. You can even add a logo to personalize your QR code further.</p>
+        
+        <h2 class="text-center mt-4">High-Resolution QR Codes</h2>
+        <p>You can generate free QR codes on this website. A QR code is a two dimensional barcode that stores information in black and white dots (called data pixels or “QR code modules”). Besides the black and white version, you can also create a colored QR code. For these codes to work without problems, make sure the contrast is sufficient and the result is not a negative (in terms of color).</p>
+
+        <h2 class="text-center mt-5">About Our QR Code Generator</h2>
+        <p class="mt-4">Our website allows you to create free QR codes effortlessly. A QR code is a two-dimensional barcode that encodes information using black and white dots, known as data pixels or "QR code modules." In addition to the classic black and white design, you can also generate colorful QR codes. Ensure that there is sufficient contrast between colors to maintain readability, and avoid negative color combinations. You can also enhance your QR code by adding a logo.</p>
+
+        <h2 class="text-center mt-4">How to Create a QR Code</h2>
+        <p>Simply enter your text or URL, and the QR code will be generated instantly. After that, you can download the QR code image in various formats, such as EPS or SVG (vector formats) and PNG, GIF, or JPEG (raster formats). You can also embed the QR code directly into your website using the provided embed code. Our QR codes can be used for free on printed materials like leaflets, posters, and business cards, including for commercial purposes.QR codes bridge the gap between physical products and the internet, making it easy to share a link with a mobile device. They lower the barrier for accessing a website from a smartphone and can store various types of data like advertising messages or phone numbers. Simply encode your data with our QR code generator to transfer it effortlessly to mobile devices.</p>
+        
+        <h2 class="text-center mt-4">Frequently Asked Questions</h2>
+        <div id="accordion" class="mt-4">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <span class="mb-0">
+                        <button class="btn btn-light" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                             What is a QR code?
+                        </button>
+                    </span>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        A QR code is a two-dimensional code (2D code) that contains data in both horizontal and vertical dimensions. The acronym QR stands for "Quick Response." Unlike traditional barcodes, QR codes consist of pixels (modules) rather than bars.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <span class="mb-0">
+                        <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                             How do I create a QR code?
+                        </button>
+                    </span>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        To create a QR code, simply input your desired text, URL, SMS, or vCard information. The QR code will be generated in real-time, and you can download it in various formats.
+                    </div>
+                </div>
+ </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <span class="mb-0">
+                        <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                             Can I customize my QR code?
+                        </button>
+                    </span>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                        Absolutely! You can customize your QR code by changing its colors and even adding a logo in the center to enhance its visual appeal.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFour">
+                    <span class="mb-0">
+                        <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                             What formats can I download my QR code in?
+                        </button>
+                    </span>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                    <div class="card-body">
+                        You can download your QR code in PNG format.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingFive">
+                    <span class="mb-0">
+                        <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                             Are there any limitations to QR codes?
+                        </button>
+                    </span>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                    <div class="card-body">
+                        Yes, static QR codes cannot be edited once created. 
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingSix">
+                    <span class="mb-0">
+                        <button class="btn btn-light collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                             How can I track my QR code's performance?
+                        </button>
+                    </span>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                    <div class="card-body">
+                        If you use dynamic QR codes, you can track scans and gather analytics through our QR management platform.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <script>
+    // When the QR code is generated, show the QR code section
+    document.addEventListener('DOMContentLoaded', function() {
+        if (document.getElementById('qrCodeImage')) {
+            document.getElementById('qrCodeSection').style.display = 'block';
+        }
+    });
+
+    // When the download button is clicked, hide the QR code section
+    document.getElementById('downloadBtn')?.addEventListener('click', function() {
+        setTimeout(function() {
+            document.getElementById('qrCodeSection').style.display = 'none';
+        }, 100);
+    });
+</script>
+
+</body>
+</html>
