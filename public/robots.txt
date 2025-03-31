@@ -1,0 +1,6 @@
+# Allow all robots to crawl the only page
+User-agent: *
+Disallow:
+
+# Sitemap location
+Sitemap: https://easyqrcreate.com/sitemap.xml
